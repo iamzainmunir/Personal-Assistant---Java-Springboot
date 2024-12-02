@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  task-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: taskservice:0.0.1
+    container_name: taskservice
+    ports:
+      - "4000:4000"
+
+networks:
+  personal-assistant:
+    driver: bridge
